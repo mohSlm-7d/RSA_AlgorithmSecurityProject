@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="rsaScript.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input id = "pTextField" type="text">
+            </td>
+            <td>
+                <input id = "qTextField" type="text">
+            </td>
+            <td>
+                <button onclick="return InitializePAndQ()">Initialize P and Q</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id = "eTextField" type="text" hidden="true" placeholder="Encryption key">
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+                <input id = "textToEncrypt" type="text" placeholder="encryption text: Hello Mohammad" hidden="true">
+            </td>
+            <td>
+                <button id="encryptBttn" onclick="return encryptText()" hidden="true">Encrypt</button>                
+            </td>
+        </tr>
+            <br>
+            <br>
+        <tr>
+            <td>
+                <input id = "encryptionText" type="text" placeholder="encrypted text:[10, 20, 30]" hidden="true">
+            </td>
+        </tr>
+        
+        <br>
+        <br>
+        <tr>
+            <td>
+                <input id = "textToDecrypt" type="text" placeholder="decrypt text: [10, 20, 30]" hidden="true">
+            </td>
+            <td>
+                <button id="decryptBttn" onclick="return decryptText()" hidden="true">Decrypt</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id = "decryptionText" type="text" placeholder="decrypt text: [10, 20, 30]" hidden="true">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
