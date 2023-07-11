@@ -1,12 +1,3 @@
-//const BigInteger = require('big-integer');
-//const readline = require('readline-sync');
-const p_field = document.getElementById('p');
-const q_field = document.getElementById('q');
-const e_field = document.getElementById('e');
-
-let plainText;
-let cipherText;
-    
 class RSA{
   static p;
   static q;
@@ -218,6 +209,7 @@ class RSA{
   };
 }
 
+
   const InitializePAndQ = ()=>{
     try{
       const pTextField = document.getElementById("pTextField");
@@ -240,6 +232,21 @@ class RSA{
       document.getElementById("textToDecrypt").hidden = false;
       document.getElementById("decryptBttn").hidden = false;
       document.getElementById("decryptionText").hidden = false;
+
+      const clearEncryptionBttn = document.getElementById("clearEncryptionTextFieldsBttn");
+      clearEncryptionBttn.hidden = false;
+      clearEncryptionBttn.onclick = ()=>{
+        document.getElementById("textToEncrypt").value="";
+        document.getElementById("encryptionText").value="";
+      };
+
+      const clearDecryptionBttn = document.getElementById("clearDecrptionTextFieldsBttn");
+      clearDecryptionBttn.hidden = false;
+      clearDecryptionBttn.onclick= ()=>{
+        document.getElementById("textToDecrypt").value="";
+        document.getElementById("decryptionText").value="";
+      };
+
     }catch(error){
       if(typeof error === "object"){
         alert(`${error.name}: ${error.message}`);
@@ -281,8 +288,3 @@ class RSA{
       }
     }
   };
-
-
-
-
-
